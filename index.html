@@ -1,103 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>LuxeCeram - Premium Tiles Export</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-body{
-margin:0;
-font-family:Arial;
-background:#0f0f10;
-color:#fff;
-scroll-behavior:smooth;
-}
-
-header{
-display:flex;
-justify-content:space-between;
-padding:20px 60px;
-background:#0f0f10;
-position:sticky;
-top:0;
-}
-
-.logo{
-font-size:22px;
-font-weight:bold;
-color:#d4af37;
-}
-
-nav a{
-color:white;
-margin:0 15px;
-text-decoration:none;
-}
-
-.hero{
-height:90vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-url('https://images.unsplash.com/photo-1600607687644-c7f34b5b3c3e');
-background-size:cover;
-}
-
-.hero h1{
-font-size:50px;
-color:#d4af37;
-}
-
-.section{
-padding:80px 60px;
-}
-
-h2{
-color:#d4af37;
-margin-bottom:20px;
-}
-
-.tiles{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:20px;
-}
-
-.tile{
-background:#1a1a1a;
-padding:20px;
-text-align:center;
-cursor:pointer;
-border:1px solid #333;
-transition:0.3s;
-}
-
-.tile:hover{
-background:#d4af37;
-color:#000;
-}
-
-.about, .contact{
-background:#111;
-padding:80px 60px;
-}
-
-.contact input, .contact textarea{
-width:100%;
-margin:10px 0;
-padding:10px;
-}
-
-footer{
-text-align:center;
-padding:20px;
-background:#000;
-}
-</style>
+<title>LuxeCeram</title>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
@@ -111,54 +16,67 @@ background:#000;
 </nav>
 </header>
 
-<section class="hero">
-<h1>Luxury Tiles Export</h1>
-<p>Premium ceramic & porcelain tiles from Iran to the world</p>
-</section>
-
-<section id="sizes" class="section">
-<h2>Tile Sizes</h2>
-
-<div class="tiles">
-
-<div class="tile" onclick="openSize('60x60')">60×60</div>
-<div class="tile" onclick="openSize('50x50')">50×50</div>
-<div class="tile" onclick="openSize('30x60')">30×60</div>
-<div class="tile" onclick="openSize('60x120')">60×120</div>
-<div class="tile" onclick="openSize('30x90')">30×90</div>
-<div class="tile" onclick="openSize('100x100')">100×100</div>
-<div class="tile" onclick="openSize('80x80')">80×80</div>
-
+<div class="hero">
+<h1>Premium Tile Export from Iran</h1>
+<p>Luxury ceramic & porcelain tiles for global projects</p>
 </div>
+
+<section id="sizes" class="grid">
+
+<a href="size-60x60.html" class="card">
+<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d">
+<h3>60×60</h3>
+</a>
+
+<a href="size-50x50.html" class="card">
+<img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0">
+<h3>50×50</h3>
+</a>
+
+<a href="size-30x60.html" class="card">
+<img src="https://images.unsplash.com/photo-1616486701797-0f33f61038b7">
+<h3>30×60</h3>
+</a>
+
+<a href="size-60x120.html" class="card">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+<h3>60×120</h3>
+</a>
+
+<a href="size-30x90.html" class="card">
+<img src="https://images.unsplash.com/photo-1600566753151-384129cf4e3e">
+<h3>30×90</h3>
+</a>
+
+<a href="size-100x100.html" class="card">
+<img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed">
+<h3>100×100</h3>
+</a>
+
+<a href="size-80x80.html" class="card">
+<img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6">
+<h3>80×80</h3>
+</a>
+
 </section>
 
-<section id="about" class="about">
-<h2>About Us</h2>
+<section id="about" style="padding:50px;">
+<h2 style="color:#d4af37;">About LuxeCeram</h2>
 <p>
-LuxeCeram is a premium exporter of ceramic and porcelain tiles.
-We deliver high-quality products with modern design and global standards
-to customers across Europe, CIS, and the Middle East.
+We are a premium exporter of ceramic and porcelain tiles from Iran.
+We supply high-quality tiles to Europe, CIS, Iraq and global markets.
 </p>
 </section>
 
-<section id="contact" class="contact">
-<h2>Contact</h2>
-
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Email">
-<textarea placeholder="Message"></textarea>
-<button>Send</button>
+<section id="contact" style="padding:50px;">
+<h2 style="color:#d4af37;">Contact</h2>
+<p>Email: info@luxeceram.com</p>
+<p>WhatsApp: +98 XXX XXX XXXX</p>
 </section>
 
 <footer>
-© 2026 LuxeCeram. All rights reserved.
+© 2026 LuxeCeram
 </footer>
-
-<script>
-function openSize(size){
-alert("Showing products for: " + size + "\n(Next step: we will add gallery page)");
-}
-</script>
 
 </body>
 </html>
