@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>30×60 Tiles | LuxeCeram</title>
+<meta name="description" content="30×60 cm porcelain and ceramic tile collection by LuxeCeram.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html"><img src="assets/logo.png" alt="LuxeCeram"></a>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="index.html#sizes">Sizes</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="product-hero">
+  <div class="container">
+    <div class="kicker">Product Collection</div>
+    <h1 class="section-title">30×60 cm Tiles</h1>
+    <p class="body-text">Premium export quality porcelain and ceramic tiles. Click any image to view it larger.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Available Models</h2>
+    <div id="gallery" class="gallery"></div>
+  </div>
+</section>
+
+<div id="lightbox" class="lightbox">
+  <span onclick="closeLightbox()">&times;</span>
+  <img id="lightboxImg" src="" alt="Tile preview">
+</div>
+
+<a class="whatsapp" href="https://wa.me/989131573161">WhatsApp</a>
+
+<footer class="footer">
+  <div class="container">© 2026 LuxeCeram. All rights reserved.</div>
+</footer>
+
+<script>
+const tileSize = "30x60";
+const tileLabel = "30×60";
+const imageCount = 100;
+
+const gallery = document.getElementById("gallery");
+
+for (let i = 1; i <= imageCount; i++) {
+  const number = String(i).padStart(2, "0");
+  const imgPath = `assets/${tileSize}/${number}.jpg`;
+
+  const card = document.createElement("div");
+  card.className = "product-card";
+
+  card.innerHTML = `
+    <img src="${imgPath}" alt="${tileLabel} tile model ${number}" loading="lazy"
+      onclick="openLightbox('${imgPath}')"
+      onerror="this.closest('.product-card').style.display='none'">
+    <div>
+      <h3>${tileLabel} Model ${number}</h3>
+      <p>Export quality porcelain / ceramic tile sample.</p>
+      <a class="btn" href="https://wa.me/989131573161?text=Hello%20LuxeCeram,%20I%20am%20interested%20in%20${tileSize}%20Model%20${number}">
+        Ask Price
+      </a>
+    </div>
+  `;
+
+  gallery.appendChild(card);
+}
+
+function openLightbox(src){
+  document.getElementById("lightboxImg").src = src;
+  document.getElementById("lightbox").classList.add("open");
+}
+
+function closeLightbox(){
+  document.getElementById("lightbox").classList.remove("open");
+  document.getElementById("lightboxImg").src = "";
+}
+
+document.getElementById("lightbox").addEventListener("click", function(e){
+  if(e.target.id === "lightbox") closeLightbox();
+});
+</script>
+
+</body>
+</html>
