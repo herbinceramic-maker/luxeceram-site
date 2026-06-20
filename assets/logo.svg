@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="80" viewBox="0 0 260 80">
+<rect width="260" height="80" fill="none"/>
+<g transform="translate(14 12)">
+<path d="M27 0 L54 27 L27 54 L0 27 Z" fill="none" stroke="#c9a45c" stroke-width="7"/>
+<path d="M34 15 L46 27 L27 46 L15 34 L34 15 Z" fill="none" stroke="#c9a45c" stroke-width="5"/>
+</g>
+<text x="86" y="35" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700">LuxeCeram</text>
+<text x="88" y="56" fill="#c9a45c" font-family="Arial, Helvetica, sans-serif" font-size="12">Export of Premium Tiles</text>
+</svg>
