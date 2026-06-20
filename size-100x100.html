@@ -1,13 +1,78 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>100×100 Tiles | LuxeCeram</title><meta name="description" content="100×100 cm ceramic and porcelain tile collection by LuxeCeram.">
-<link rel="stylesheet" href="assets/style.css"></head>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LuxeCeram Collection</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+
 <body>
-<header class="header"><div class="container nav"><a class="logo" href="index.html"><img src="assets/logo.svg" alt="LuxeCeram"></a><nav class="menu"><a href="index.html">Home</a><a href="index.html#sizes">Sizes</a><a href="index.html#contact">Contact</a></nav></div></header>
-<section class="product-hero"><div class="container"><div class="kicker">Product collection</div><h1 class="section-title">100×100 cm Tiles</h1><p style="color:#ddd;line-height:1.8;max-width:760px">Premium export quality ceramic and porcelain tiles. Suitable for floors, walls, commercial projects and residential interiors depending on finish and technical specifications.</p>
-<div class="specs"><div class="spec"><b>Size</b><br>100×100 cm</div><div class="spec"><b>Finish</b><br>Polished / Matte</div><div class="spec"><b>Supply</b><br>Factory direct</div><div class="spec"><b>Export</b><br>FOB / CIF</div></div></div></section>
-<section class="section"><div class="container"><h2 class="section-title">Sample Gallery</h2><div class="gallery"><div class="product-card"><img src="assets/tiles/100x100-1.svg" alt="100×100 tile model 1"><div><h3>100×100 Model 1</h3><p>Export quality ceramic / porcelain tile sample. Replace this image with your real product photo later.</p><a class="btn" href="https://wa.me/989131573161?text=Hello%20LuxeCeram,%20I%20am%20interested%20in%20100×100%20tiles">Ask Price</a></div></div>
-<div class="product-card"><img src="assets/tiles/100x100-2.svg" alt="100×100 tile model 2"><div><h3>100×100 Model 2</h3><p>Export quality ceramic / porcelain tile sample. Replace this image with your real product photo later.</p><a class="btn" href="https://wa.me/989131573161?text=Hello%20LuxeCeram,%20I%20am%20interested%20in%20100×100%20tiles">Ask Price</a></div></div>
-<div class="product-card"><img src="assets/tiles/100x100-3.svg" alt="100×100 tile model 3"><div><h3>100×100 Model 3</h3><p>Export quality ceramic / porcelain tile sample. Replace this image with your real product photo later.</p><a class="btn" href="https://wa.me/989131573161?text=Hello%20LuxeCeram,%20I%20am%20interested%20in%20100×100%20tiles">Ask Price</a></div></div></div></div></section>
-<a class="whatsapp" href="https://wa.me/989131573161">WhatsApp</a><footer class="footer"><div class="container">© 2026 LuxeCeram</div></footer>
-</body></html>
+
+<header class="header">
+<div class="container nav">
+<a class="logo" href="index.html">
+<img src="assets/logo.svg" alt="LuxeCeram">
+</a>
+
+<nav class="menu">
+<a href="index.html">Home</a>
+<a href="index.html#sizes">Sizes</a>
+<a href="index.html#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<section class="section">
+<div class="container">
+
+<h1 class="section-title" id="pageTitle"></h1>
+
+<div id="gallery" class="gallery"></div>
+
+</div>
+</section>
+
+<script>
+
+const tileSize = "100x100";
+const imageCount = 100;
+
+document.getElementById("pageTitle").innerText =
+tileSize + " cm Collection";
+
+const gallery = document.getElementById("gallery");
+
+for(let i=1;i<=imageCount;i++){
+
+const number = String(i).padStart(2,"0");
+
+const card = document.createElement("div");
+
+card.className="product-card";
+
+card.innerHTML=`
+
+<img src="assets/${tileSize}/${number}.jpg"
+onerror="this.parentElement.style.display='none'">
+
+<div>
+<h3>${tileSize} - ${number}</h3>
+
+<a class="btn"
+href="https://wa.me/989131573161?text=I am interested in ${tileSize} model ${number}">
+Ask Price
+</a>
+
+</div>
+
+`;
+
+gallery.appendChild(card);
+
+}
+
+</script>
+
+</body>
+</html>
