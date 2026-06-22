@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>35x120 Wood Effect Porcelain Tiles Supplier | LuxeCeram</title>
+<meta name="description" content="35x120 wood effect porcelain tiles supplier from Iran. High-quality wood look porcelain tiles for residential and commercial projects.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://luxeceram.com/size-35x120.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LuxeCeram">
+<meta property="og:title" content="35x120 Wood Effect Porcelain Tiles Supplier | LuxeCeram">
+<meta property="og:description" content="35x120 wood effect porcelain tiles supplier from Iran. High-quality wood look porcelain tiles for residential and commercial projects.">
+<meta property="og:image" content="https://luxeceram.com/assets/logo.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html"><img src="assets/logo.png" alt="LuxeCeram"></a>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="index.html#sizes">Sizes</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="product-hero">
+  <div class="container">
+    <div class="kicker">Product Collection</div>
+    <h1 class="section-title">35×120 cm Tiles</h1>
+    <p class="body-text">Premium export quality porcelain and ceramic tiles. Click any image to view it larger.</p>
+  </div>
+</section>
+
+<section class="section light">
+  <div class="container">
+    <h2>35x120 Wood Effect Porcelain Tiles Supplier</h2>
+
+    <p>35x120 porcelain tiles offer a realistic wood appearance while maintaining the durability, water resistance and low maintenance benefits of porcelain. This size is suitable for modern interiors and commercial environments.</p>
+
+    <p>The 35x120 wood effect collection is used in living areas, hospitality projects, retail spaces and architectural designs that require natural aesthetics with strong technical performance.</p>
+
+    <p>LuxeCeram supplies export-quality 35x120 porcelain tiles from selected Iranian factories, supporting buyers with pricing, sample selection, documentation and reliable shipment services.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Available Models</h2>
+    <div id="gallery" class="gallery"></div>
+  </div>
+</section>
+
+<div id="lightbox" class="lightbox">
+  <span onclick="closeLightbox()">&times;</span>
+  <img id="lightboxImg" src="" alt="Tile preview">
+</div>
+
+<a class="whatsapp" href="https://wa.me/989131573161">WhatsApp</a>
+
+<footer class="footer">
+  <div class="container">© 2026 LuxeCeram. All rights reserved.</div>
+</footer>
+
+<script>
+const tileSize = "35x120";
+const tileLabel = "35×120";
+const imageCount = 100;
+
+const gallery = document.getElementById("gallery");
+
+for (let i = 1; i <= imageCount; i++) {
+  const number = String(i).padStart(2, "0");
+  const imgPath = `assets/${tileSize}/${number}.jpg`;
+
+  const card = document.createElement("div");
+  card.className = "product-card";
+
+  card.innerHTML = `
+    <img src="${imgPath}" alt="35x120 wood effect porcelain tile model ${number}" loading="lazy"
+      onclick="openLightbox('${imgPath}')"
+      onerror="this.closest('.product-card').style.display='none'">
+    <div>
+      <h3>${tileLabel} Model ${number}</h3>
+      <p>Export quality 35×120 tile sample.</p>
+      <a class="btn" href="https://wa.me/989131573161?text=Hello%20LuxeCeram,%20I%20am%20interested%20in%20${tileSize}%20Model%20${number}">
+        Ask Price
+      </a>
+    </div>
+  `;
+
+  gallery.appendChild(card);
+}
+
+function openLightbox(src){
+  document.getElementById("lightboxImg").src = src;
+  document.getElementById("lightbox").classList.add("open");
+}
+
+function closeLightbox(){
+  document.getElementById("lightbox").classList.remove("open");
+  document.getElementById("lightboxImg").src = "";
+}
+
+document.getElementById("lightbox").addEventListener("click", function(e){
+  if(e.target.id === "lightbox") closeLightbox();
+});
+</script>
+
+</body>
+</html>
