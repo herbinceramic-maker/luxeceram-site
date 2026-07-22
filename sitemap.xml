@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-<url>
-<loc>https://luxeceram.com/</loc>
-<priority>1.0</priority>
-</url>
-
-<url><loc>https://luxeceram.com/size-20x120.html</loc></url> <url><loc>https://luxeceram.com/size-30x30.html</loc></url> <url><loc>https://luxeceram.com/size-30x60.html</loc></url> <url><loc>https://luxeceram.com/size-30x90.html</loc></url> <url><loc>https://luxeceram.com/size-35x120.html</loc></url> <url><loc>https://luxeceram.com/size-40x40.html</loc></url> <url><loc>https://luxeceram.com/size-50x50.html</loc></url> <url><loc>https://luxeceram.com/size-60x60.html</loc></url> <url><loc>https://luxeceram.com/size-60x120.html</loc></url> <url><loc>https://luxeceram.com/size-80x80.html</loc></url> <url><loc>https://luxeceram.com/size-100x100.html</loc></url>
-<url><loc>https://luxeceram.com/blog-import-tiles-from-iran.html</loc></url>
-<url><loc>https://luxeceram.com/blog-porcelain-vs-ceramic.html</loc></url>
-<url><loc>https://luxeceram.com/blog-fob-vs-cif.html</loc></url>
-<url><loc>https://luxeceram.com/blog-large-format-tiles.html</loc></url>
-<url><loc>https://luxeceram.com/blog-commercial-project-tiles.html</loc></url>
+<url><loc>https://luxeceram.com/</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
+<url><loc>https://luxeceram.com/size-100x100.html</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
+<url><loc>https://luxeceram.com/size-20x120.html</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
+<url><loc>https://luxeceram.com/size-30x30.html</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
+<url><loc>https://luxeceram.com/size-30x60.html</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
+<url><loc>https://luxeceram.com/size-30x90.html</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
+<url><loc>https://luxeceram.com/size-35x120.html</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
+<url><loc>https://luxeceram.com/size-40x40.html</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
+<url><loc>https://luxeceram.com/size-50x50.html</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
+<url><loc>https://luxeceram.com/size-60x120.html</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
+<url><loc>https://luxeceram.com/size-60x60.html</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
+<url><loc>https://luxeceram.com/size-80x80.html</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
+<url><loc>https://luxeceram.com/blog/</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
+<url><loc>https://luxeceram.com/ru/blog/</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
+<url><loc>https://luxeceram.com/ar/blog/</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
+<url><loc>https://luxeceram.com/tr/blog/</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
+<url><loc>https://luxeceram.com/blog-import-tiles-from-iran.html</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
+<url><loc>https://luxeceram.com/blog-porcelain-vs-ceramic.html</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
+<url><loc>https://luxeceram.com/blog-fob-vs-cif.html</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
+<url><loc>https://luxeceram.com/blog-large-format-tiles.html</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
+<url><loc>https://luxeceram.com/blog-commercial-project-tiles.html</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
+<url><loc>https://luxeceram.com/blog/verify-reliable-iranian-tile-supplier/</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq></url>
 </urlset>
