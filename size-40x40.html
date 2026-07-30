@@ -45,7 +45,7 @@ f.parentNode.insertBefore(j,f);
 <!-- End Google Tag Manager (noscript) -->
 <header class="header">
   <div class="container nav">
-    <a class="logo" href="index.html"><img src="assets/logo.png" alt="LuxeCeram"></a>
+    <a class="logo" href="index.html"><img src="assets/logo.png" alt="LuxeCeram" decoding="async" width="2048" height="2048"></a>
     <nav class="menu">
       <a href="index.html">Home</a>
       <a href="index.html#sizes">Sizes</a>
@@ -83,7 +83,7 @@ f.parentNode.insertBefore(j,f);
 
 <div id="lightbox" class="lightbox">
   <span onclick="closeLightbox()">&times;</span>
-  <img id="lightboxImg" src="" alt="Tile preview">
+  <img id="lightboxImg" src="" alt="Tile preview" decoding="async" loading="lazy">
 </div>
 
 <a class="whatsapp" href="https://wa.me/989131573161">WhatsApp</a>
@@ -109,7 +109,7 @@ for (let i = 1; i <= imageCount; i++) {
   card.innerHTML = `
     <img src="${imgPath}" alt="40x40 ceramic floor tile model ${number}" loading="lazy"
       onclick="openLightbox('${imgPath}')"
-      onerror="this.closest('.product-card').style.display='none'">
+      onerror="this.closest('.product-card').style.display='none'" decoding="async">
     <div>
       <h3>${tileLabel} Model ${number}</h3>
       <p>Export quality 40×40 tile sample.</p>
