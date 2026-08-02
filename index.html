@@ -222,12 +222,22 @@ f.parentNode.insertBefore(j,f);
       </p>
     </div>
 
-    <div class="contact-card form">
-      <input placeholder="Your Name">
-      <input placeholder="Email / WhatsApp">
-      <textarea placeholder="Tell us tile size, quantity, destination country and preferred finish"></textarea>
-      <a class="btn" href="mailto:info@luxeceram.com?subject=Tile%20Export%20Inquiry" data-i18n="email_btn">Send Email</a>
-    </div>
+    <!-- KAIOS-LUXE-CONTACT-GMAIL-START -->
+<div class="contact-card form" id="luxe-inquiry-form">
+  <input id="luxe-inquiry-name" name="name" placeholder="Your Name" autocomplete="name" required>
+  <input id="luxe-inquiry-contact" name="contact" placeholder="Email / WhatsApp" required>
+  <textarea id="luxe-inquiry-message" name="message"
+    placeholder="Tell us tile size, quantity, destination country and preferred finish"
+    required></textarea>
+  <div class="actions">
+    <button class="btn" type="button" id="luxe-open-gmail">Open Gmail</button>
+    <button class="btn dark" type="button" id="luxe-copy-email">Copy email address</button>
+  </div>
+  <p id="luxe-inquiry-status" class="sub" role="status" aria-live="polite">
+    Complete the fields, then open the prepared message in Gmail.
+  </p>
+</div>
+<!-- KAIOS-LUXE-CONTACT-GMAIL-END -->
   </div>
 </section>
 
@@ -242,5 +252,66 @@ f.parentNode.insertBefore(j,f);
 <script src="assets/script.js"></script>
 
   <script defer src="/assets/js/kai-retargeting-events.js" data-kai-retargeting-foundation="v1"></script>
+<!-- KAIOS-LUXE-CONTACT-GMAIL-SCRIPT-START -->
+<script>
+(function () {
+  var name = document.getElementById('luxe-inquiry-name');
+  var contact = document.getElementById('luxe-inquiry-contact');
+  var message = document.getElementById('luxe-inquiry-message');
+  var openGmail = document.getElementById('luxe-open-gmail');
+  var copyEmail = document.getElementById('luxe-copy-email');
+  var status = document.getElementById('luxe-inquiry-status');
+  var recipient = 'info@luxeceram.com';
+
+  function complete() {
+    if (!name.value.trim() || !contact.value.trim() || !message.value.trim()) {
+      status.textContent = 'Please complete all three fields.';
+      return false;
+    }
+    return true;
+  }
+
+  openGmail.addEventListener('click', function () {
+    if (!complete()) return;
+
+    var body = [
+      'Hello LuxeCeram,',
+      '',
+      'Name: ' + name.value.trim(),
+      'Email / WhatsApp: ' + contact.value.trim(),
+      '',
+      'Tile requirements:',
+      message.value.trim(),
+      '',
+      'Sent from luxeceram.com'
+    ].join('\n');
+
+    var gmail = 'https://mail.google.com/mail/?view=cm&fs=1'
+      + '&to=' + encodeURIComponent(recipient)
+      + '&su=' + encodeURIComponent('Tile Export Inquiry')
+      + '&body=' + encodeURIComponent(body);
+
+    window.open(gmail, '_blank', 'noopener,noreferrer');
+    status.textContent = 'Gmail opened. Review the message and press Send.';
+  });
+
+  copyEmail.addEventListener('click', async function () {
+    try {
+      await navigator.clipboard.writeText(recipient);
+    } catch (error) {
+      var box = document.createElement('textarea');
+      box.value = recipient;
+      box.style.position = 'fixed';
+      box.style.opacity = '0';
+      document.body.appendChild(box);
+      box.select();
+      document.execCommand('copy');
+      document.body.removeChild(box);
+    }
+    status.textContent = 'info@luxeceram.com copied.';
+  });
+})();
+</script>
+<!-- KAIOS-LUXE-CONTACT-GMAIL-SCRIPT-END -->
 </body>
 </html>
