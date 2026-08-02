@@ -1,14 +1,2 @@
-
-.kai-luxeceram{overflow-x:clip}
-.kai-luxeceram main{min-width:0}
-.kai-luxeceram img{max-width:100%;height:auto}
-.kai-luxeceram :where(h1,h2,h3,p,li,td,th){overflow-wrap:anywhere}
-.kai-luxeceram :focus-visible{outline:3px solid currentColor;outline-offset:3px}
-.kai-luxeceram :where(.product-card,.size-card,.article-card,.card){min-width:0}
-.kai-luxeceram :where(input,select,textarea){max-width:100%;box-sizing:border-box}
-.kai-luxeceram table{max-width:100%}
-@media(max-width:720px){
- .kai-luxeceram :where(a,button,input,select,textarea){min-height:44px}
- .kai-luxeceram table{display:block;overflow-x:auto}
-}
-html[dir="rtl"] .kai-luxeceram{direction:rtl}
+/* Emergency neutralization: do not override logo or image dimensions. */
+html, body { max-width: 100%; }
