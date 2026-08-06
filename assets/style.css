@@ -350,3 +350,23 @@ body[data-kai-luxeceram-visual-refresh="v1"] .hero{
   .card h3{font-size:1.4rem;}
 }
 /* KAIOS-LUXECERAM-VISUAL-MEDIA-REFRESH-V1-END */
+
+/* KAI_OS_LUXECERAM_TYPOGRAPHY_PREVIEW_V5_BEGIN
+   Small, namespaced visual/UX adjustments only. */
+body{font-size:16px;line-height:1.66}
+.hero h1,.section-title,.product-hero .section-title,.kai-luxe-guide-title,.card h3,.product-card h3{text-wrap:balance;overflow-wrap:normal;hyphens:auto}
+.hero h1{max-width:23ch!important;font-size:clamp(36px,4.4vw,56px)!important;line-height:1.1!important;letter-spacing:-.022em}
+.hero p{max-width:68ch!important;font-size:17px!important;line-height:1.68!important}
+.section-title{max-width:30ch;font-size:clamp(27px,3.2vw,40px)!important;line-height:1.16!important;letter-spacing:-.016em}
+.product-hero .section-title{max-width:30ch!important;font-size:clamp(28px,3.35vw,42px)!important;line-height:1.15!important}
+.kai-luxe-guide-title{max-width:30ch;font-size:clamp(27px,3.15vw,39px)!important;line-height:1.16!important}
+.card h3{font-size:clamp(21px,2vw,25px)!important;line-height:1.22!important;letter-spacing:-.01em}
+.product-card h3,.kai-luxe-guide-card h3{font-size:clamp(19px,1.7vw,23px)!important;line-height:1.27!important}
+.section{padding:clamp(58px,6vw,72px) 0!important}
+.size-grid{gap:18px!important;margin-top:30px!important}
+.card .pad{padding:17px 16px 19px!important}.card p{font-size:15px;line-height:1.46}
+.sub,.body-text,.contact-card p,.kai-luxe-guide-lead,.kai-luxe-guide-card p,.kai-luxe-guide-card li{line-height:1.7!important}
+.menu{gap:18px;font-size:.94rem}.btn{padding:12px 20px;font-size:.94rem;line-height:1.2}
+@media(max-width:900px){.hero h1{max-width:23ch!important;font-size:clamp(32px,5.2vw,43px)!important}.section-title{max-width:30ch;font-size:clamp(27px,4.2vw,35px)!important}.section{padding:54px 0!important}}
+@media(max-width:600px){.hero{min-height:500px;padding:52px 0}.hero h1{max-width:100%!important;font-size:clamp(27px,7.5vw,32px)!important;line-height:1.17!important;letter-spacing:-.012em}.hero p{font-size:15.5px!important;line-height:1.64!important}.section-title,.product-hero .section-title,.kai-luxe-guide-title{max-width:100%!important;font-size:clamp(26px,7.3vw,32px)!important;line-height:1.16!important}.card h3{font-size:21px!important}.section{padding:44px 0!important}.size-grid{gap:15px!important;margin-top:24px!important}.card .pad{padding:15px 14px 17px!important}.menu{font-size:.88rem;gap:9px 12px}}
+/* KAI_OS_LUXECERAM_TYPOGRAPHY_PREVIEW_V5_END */
