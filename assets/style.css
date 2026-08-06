@@ -306,3 +306,47 @@ html[dir="rtl"] .kai-luxe-guide-card ul{
   }
 }
 /* KAIOS-LUXECERAM-TEXT-SEO-PREVIEW-V1-END */
+
+
+/* KAIOS-LUXECERAM-VISUAL-MEDIA-REFRESH-V1-BEGIN */
+body{font-family:"Aptos","Segoe UI",Arial,sans-serif;font-size:16px;line-height:1.68;}
+body[data-kai-luxeceram-visual-refresh="v1"] .hero{
+  min-height:680px;
+  background-image:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.54),rgba(0,0,0,.68)),url('kai-visual-refresh-v1/hero/luxeceram-hero.webp');
+  background-position:center;
+}
+.hero h1{font-size:clamp(2.65rem,5.25vw,4.8rem);line-height:1.06;max-width:900px;text-wrap:balance;}
+.hero p{font-size:1.05rem;line-height:1.7;max-width:760px;}
+.section{padding:66px 0;}
+.section-title{font-size:clamp(2rem,3.7vw,3.25rem);line-height:1.1;text-wrap:balance;}
+.product-hero{padding:54px 0 34px;}
+.product-hero .section-title{font-size:clamp(2rem,3.5vw,3rem);}
+.light h2:not(.section-title){font-size:clamp(1.55rem,2.6vw,2.25rem);line-height:1.2;}
+.card img{height:220px;object-fit:contain;background:#f3efe7;padding:10px;}
+.card .pad{padding:15px 16px 18px;}
+.card h3{font-size:1.55rem;line-height:1.1;}
+.card .pad p{display:none!important;}
+.product-card h3{font-size:1.25rem;line-height:1.25;}
+.product-card p{line-height:1.6;color:#d5cec2;}
+.btn,a.btn{color:#171108!important;background:linear-gradient(135deg,#d5ad55,#f0d887)!important;text-shadow:none!important;border:1px solid rgba(255,255,255,.18);}
+.btn:hover,a.btn:hover{filter:brightness(1.06);color:#0d0a05!important;}
+.btn.dark,a.btn.dark{background:#111!important;color:#fff!important;border-color:#4a4a4a!important;}
+.kai-luxe-poster-section{background:#0b0b0c;}
+.kai-luxe-poster-grid{display:grid;grid-template-columns:minmax(0,.78fr) minmax(320px,1fr);gap:44px;align-items:center;}
+.kai-luxe-poster-copy .body-text{max-width:620px;}
+.kai-luxe-poster-frame{margin:0;border-radius:22px;overflow:hidden;border:1px solid #342b1d;box-shadow:0 24px 60px rgba(0,0,0,.42);}
+.kai-luxe-poster-frame img{display:block;width:100%;height:auto;aspect-ratio:2/3;object-fit:cover;}
+@media(max-width:900px){
+  body[data-kai-luxeceram-visual-refresh="v1"] .hero{min-height:600px;}
+  .kai-luxe-poster-grid{grid-template-columns:1fr;gap:28px;}
+  .kai-luxe-poster-frame{max-width:620px;margin-inline:auto;}
+}
+@media(max-width:560px){
+  body[data-kai-luxeceram-visual-refresh="v1"] .hero{min-height:520px;padding:54px 0;}
+  .hero h1{font-size:clamp(2rem,10vw,2.75rem);line-height:1.12;}
+  .section-title{font-size:clamp(1.8rem,8vw,2.45rem);line-height:1.16;}
+  .section{padding:48px 0;}
+  .card img{height:210px;}
+  .card h3{font-size:1.4rem;}
+}
+/* KAIOS-LUXECERAM-VISUAL-MEDIA-REFRESH-V1-END */
