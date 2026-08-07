@@ -370,3 +370,102 @@ body{font-size:16px;line-height:1.66}
 @media(max-width:900px){.hero h1{max-width:23ch!important;font-size:clamp(32px,5.2vw,43px)!important}.section-title{max-width:30ch;font-size:clamp(27px,4.2vw,35px)!important}.section{padding:54px 0!important}}
 @media(max-width:600px){.hero{min-height:500px;padding:52px 0}.hero h1{max-width:100%!important;font-size:clamp(27px,7.5vw,32px)!important;line-height:1.17!important;letter-spacing:-.012em}.hero p{font-size:15.5px!important;line-height:1.64!important}.section-title,.product-hero .section-title,.kai-luxe-guide-title{max-width:100%!important;font-size:clamp(26px,7.3vw,32px)!important;line-height:1.16!important}.card h3{font-size:21px!important}.section{padding:44px 0!important}.size-grid{gap:15px!important;margin-top:24px!important}.card .pad{padding:15px 14px 17px!important}.menu{font-size:.88rem;gap:9px 12px}}
 /* KAI_OS_LUXECERAM_TYPOGRAPHY_PREVIEW_V5_END */
+
+/* KAI_OS_LUXECERAM_EDITORIAL_VISUAL_PREVIEW_V2_BEGIN */
+.hero h1,
+.section-title,
+.article-shell h1,
+.article-shell h2{
+  text-wrap:balance;
+}
+.hero h1{
+  font-weight:760!important;
+}
+.section-title{
+  font-weight:730!important;
+}
+.article-shell{
+  max-width:930px!important;
+}
+.article-shell h1{
+  max-width:25ch!important;
+  font-size:clamp(2rem,3vw,2.65rem)!important;
+  line-height:1.14!important;
+}
+.article-shell h2{
+  font-size:clamp(1.35rem,1.9vw,1.72rem)!important;
+  line-height:1.25!important;
+}
+.article-shell p,
+.article-shell li{
+  line-height:1.75!important;
+}
+.kai-luxe-poster-section{
+  padding:38px 0!important;
+  background:#0b0b0c!important;
+}
+.kai-luxe-poster-section .kai-luxe-poster-grid{
+  width:min(calc(100% - 32px),1180px);
+  margin-inline:auto;
+  grid-template-columns:minmax(0,1.1fr) minmax(330px,.9fr)!important;
+  gap:34px!important;
+  align-items:center!important;
+  padding:clamp(26px,3.5vw,42px);
+  border:1px solid #332a1d;
+  border-radius:26px;
+  background:
+    radial-gradient(circle at 85% 18%,rgba(213,173,85,.10),transparent 34%),
+    linear-gradient(145deg,#0a0a0b,#11100e);
+}
+.kai-luxe-poster-copy{
+  align-self:center;
+}
+.kai-luxe-poster-copy .section-title{
+  margin:.35rem 0 .8rem!important;
+}
+.kai-luxe-poster-frame{
+  width:100%;
+  max-width:470px!important;
+  margin:0!important;
+  justify-self:end;
+  border-radius:20px!important;
+  background:#080808!important;
+  box-shadow:0 18px 46px rgba(0,0,0,.36)!important;
+}
+.kai-luxe-poster-frame img{
+  display:block;
+  width:100%;
+  height:auto!important;
+  max-height:500px;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+  background:#080808!important;
+}
+@media(max-width:900px){
+  .kai-luxe-poster-section .kai-luxe-poster-grid{
+    grid-template-columns:1fr!important;
+    gap:24px!important;
+  }
+  .kai-luxe-poster-frame{
+    max-width:520px!important;
+    justify-self:center;
+  }
+}
+@media(max-width:600px){
+  .kai-luxe-poster-section{
+    padding:24px 0!important;
+  }
+  .kai-luxe-poster-section .kai-luxe-poster-grid{
+    width:min(calc(100% - 20px),1180px);
+    padding:20px 17px;
+    border-radius:20px;
+    grid-template-columns:1fr!important;
+  }
+  .kai-luxe-poster-frame{
+    display:none!important;
+  }
+  .kai-luxe-poster-copy{
+    width:100%;
+  }
+}
+/* KAI_OS_LUXECERAM_EDITORIAL_VISUAL_PREVIEW_V2_END */
