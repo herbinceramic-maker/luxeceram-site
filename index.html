@@ -35,6 +35,18 @@ f.parentNode.insertBefore(j,f);
   
 <link rel="stylesheet" href="/assets/ch17-1.css"><script src="/assets/consent.js" defer></script><script src="/assets/site-enhancements.js" defer></script>
   <!-- KAIOS-LUXECERAM-TEXT-SEO-PREVIEW-V1 -->
+<style id="kai-luxeceram-final-refinement-v8">
+
+/* KAI_OS_LUXECERAM_FINAL_REFINEMENT_PREVIEW_V8_BEGIN
+   Remove any decorative pseudo-element full stop from homepage hero. */
+.hero h1::after{
+  content:none!important;
+  display:none!important;
+}
+/* KAI_OS_LUXECERAM_FINAL_REFINEMENT_PREVIEW_V8_END */
+
+h1::after,[class*="hero"] h1::after,.hero-title::after{content:none!important;display:none!important;}
+</style>
 </head>
 
 <body  data-kai-luxeceram-text-seo-preview="v1" data-kai-luxeceram-visual-refresh="v1">
@@ -322,5 +334,43 @@ f.parentNode.insertBefore(j,f);
 })();
 </script>
 <!-- KAIOS-LUXE-CONTACT-GMAIL-SCRIPT-END -->
+<script id="kai-luxeceram-heading-cleanup-v8">
+(function(){
+  function removeTrailingPeriodFromHeading(el){
+    if (!el) return;
+    var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    var nodes = [], n;
+    while ((n = walker.nextNode())) nodes.push(n);
+    for (var i = nodes.length - 1; i >= 0; i--){
+      var value = nodes[i].nodeValue || '';
+      if (!value.trim()) continue;
+      var cleaned = value.replace(/[.\u002e\uFF0E]\s*$/, '');
+      if (cleaned !== value) nodes[i].nodeValue = cleaned;
+      break;
+    }
+  }
+
+  function clean(){
+    var headings = document.querySelectorAll('main h1, main h2, main h3, header + main h1, .hero h1, [class*="hero"] h1');
+    for (var i = 0; i < headings.length; i++){
+      removeTrailingPeriodFromHeading(headings[i]);
+    }
+  }
+
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', clean);
+  } else {
+    clean();
+  }
+
+  setTimeout(clean, 100);
+  setTimeout(clean, 500);
+  setTimeout(clean, 1200);
+
+  var observer = new MutationObserver(function(){ clean(); });
+  observer.observe(document.documentElement, {subtree:true, childList:true, characterData:true});
+  setTimeout(function(){ observer.disconnect(); clean(); }, 1800);
+})();
+</script>
 </body>
 </html>
