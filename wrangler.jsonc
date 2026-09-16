@@ -3,6 +3,7 @@
   "name": "luxeceram-site",
   "compatibility_date": "2026-08-06",
   "assets": {
-    "directory": "."
+    "directory": ".",
+    "html_handling": "drop-trailing-slash"
   }
 }
