@@ -19,15 +19,89 @@ jobs:
           fetch-depth: 1
           lfs: true
 
-      - name: Create source snapshot
+      - name: Create and split source snapshot
         run: |
           NAME="luxeceram-pre-visual-refresh-20260930"
-          zip -r "$NAME.zip" . -x ".git/*" -x "$NAME.zip"
+          zip -r "$NAME.zip" . -x ".git/*" -x "$NAME.zip" -x "$NAME.zip.part-*"
+          split -b 60M "$NAME.zip" "$NAME.zip.part-"
+          ls -lh "$NAME.zip.part-"*
 
-      - name: Upload backup artifact
+      - name: Upload backup part aa
         uses: actions/upload-artifact@v4
         with:
-          name: luxeceram-pre-visual-refresh-20260930
-          path: luxeceram-pre-visual-refresh-20260930.zip
-          if-no-files-found: error
+          name: luxeceram-pre-visual-refresh-20260930-part-aa
+          path: luxeceram-pre-visual-refresh-20260930.zip.part-aa
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Upload backup part ab
+        uses: actions/upload-artifact@v4
+        with:
+          name: luxeceram-pre-visual-refresh-20260930-part-ab
+          path: luxeceram-pre-visual-refresh-20260930.zip.part-ab
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Upload backup part ac
+        uses: actions/upload-artifact@v4
+        with:
+          name: luxeceram-pre-visual-refresh-20260930-part-ac
+          path: luxeceram-pre-visual-refresh-20260930.zip.part-ac
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Upload backup part ad
+        uses: actions/upload-artifact@v4
+        with:
+          name: luxeceram-pre-visual-refresh-20260930-part-ad
+          path: luxeceram-pre-visual-refresh-20260930.zip.part-ad
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Upload backup part ae
+        uses: actions/upload-artifact@v4
+        with:
+          name: luxeceram-pre-visual-refresh-20260930-part-ae
+          path: luxeceram-pre-visual-refresh-20260930.zip.part-ae
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Upload backup part af
+        uses: actions/upload-artifact@v4
+        with:
+          name: luxeceram-pre-visual-refresh-20260930-part-af
+          path: luxeceram-pre-visual-refresh-20260930.zip.part-af
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Upload backup part ag
+        uses: actions/upload-artifact@v4
+        with:
+          name: luxeceram-pre-visual-refresh-20260930-part-ag
+          path: luxeceram-pre-visual-refresh-20260930.zip.part-ag
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Upload backup part ah
+        uses: actions/upload-artifact@v4
+        with:
+          name: luxeceram-pre-visual-refresh-20260930-part-ah
+          path: luxeceram-pre-visual-refresh-20260930.zip.part-ah
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Upload backup part ai
+        uses: actions/upload-artifact@v4
+        with:
+          name: luxeceram-pre-visual-refresh-20260930-part-ai
+          path: luxeceram-pre-visual-refresh-20260930.zip.part-ai
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Upload backup part aj
+        uses: actions/upload-artifact@v4
+        with:
+          name: luxeceram-pre-visual-refresh-20260930-part-aj
+          path: luxeceram-pre-visual-refresh-20260930.zip.part-aj
+          if-no-files-found: ignore
           retention-days: 30
