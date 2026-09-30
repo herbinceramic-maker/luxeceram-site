@@ -1,0 +1,53 @@
+name: CF Slippers Read-only Probe
+
+on:
+  push:
+    branches: [cf-slippers-probe]
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - name: Read Cloudflare Pages project metadata
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "${CLOUDFLARE_ACCOUNT_ID:-}" ] || [ -z "${CLOUDFLARE_API_TOKEN:-}" ]; then
+            echo "CF_SECRETS=missing"
+            exit 7
+          fi
+          echo "CF_SECRETS=present"
+          curl -fsS \
+            -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            -H 'Content-Type: application/json' \
+            "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects" \
+            -o /tmp/pages-projects.json
+          python3 - <<'PY'
+          import json
+          d=json.load(open('/tmp/pages-projects.json'))
+          items=d.get('result') or []
+          print('PAGES_PROJECT_COUNT='+str(len(items)))
+          for p in items:
+              src=p.get('source') or {}
+              cfg=src.get('config') or {}
+              row={
+                  'name':p.get('name'),
+                  'subdomain':p.get('subdomain'),
+                  'domains':p.get('domains') or [],
+                  'source_type':src.get('type'),
+                  'repo_name':cfg.get('repo_name'),
+                  'owner':cfg.get('owner'),
+                  'production_branch':p.get('production_branch') or cfg.get('production_branch'),
+              }
+              print('PAGES_PROJECT='+json.dumps(row,sort_keys=True))
+              if 'slippers.kavomaz.com' in row['domains']:
+                  print('SLIPPERS_MATCH='+json.dumps(row,sort_keys=True))
+          PY
