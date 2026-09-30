@@ -2,8 +2,8 @@ const translations = {
   en: {
     nav_home:"Home", nav_sizes:"Sizes", nav_about:"About Us", nav_export:"Export", nav_contact:"Contact",
     hero_kicker:"Premium surfaces. Reliable export supply.",
-    hero_title:"Porcelain and ceramic tiles for global buyers and project supply.",
-    hero_text:"LuxeCeram connects importers, distributors and project buyers with selected Iranian porcelain and ceramic tile manufacturers, supporting product comparison, samples, packing details and export documentation.",
+    hero_title:"Porcelain Tiles for Inspired Spaces",
+    hero_text:"A curated range of porcelain and ceramic surfaces for residential, commercial and architectural projects — with samples, packing details and export support for professional buyers.",
     hero_btn1:"View Collections", hero_btn2:"WhatsApp Inquiry",
     sizes_kicker:"Tile Sizes", sizes_title:"Explore Our Tile Size Collections", sizes_text:"Choose a size to view available models and request pricing.",
     about_kicker:"About LuxeCeram", about_title:"Export sourcing built around buyer requirements",

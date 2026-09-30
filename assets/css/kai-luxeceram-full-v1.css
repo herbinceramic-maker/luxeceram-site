@@ -1,0 +1,62 @@
+
+/* KAI Full-Site Redesign — LuxeCeram — DRAFT ONLY */
+:root{
+ --lx-bg:#e9e5de;--lx-card:#f8f5ef;--lx-ink:#171717;--lx-muted:#6c6861;
+ --lx-gold:#ba8a4e;--lx-dark:#0d0d0e;--lx-line:rgba(20,20,20,.12);--lx-shadow:0 28px 72px rgba(0,0,0,.12)
+}
+body{background:var(--lx-bg);color:var(--lx-ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+body h1,body h2,body h3{font-family:Georgia,"Times New Roman",serif;letter-spacing:-.035em}
+.header{position:absolute!important;inset:0 0 auto;z-index:70;background:transparent!important;border:0!important}
+.header .container{width:min(1460px,94%)!important}
+.header a,.header nav a,.header .lang{color:#fff!important}
+.header .logo img{background:rgba(255,255,255,.9);padding:6px;border-radius:8px}
+.hero{min-height:780px!important}
+.hero-content{padding-left:max(3vw,20px)!important;padding-right:max(3vw,20px)!important}
+.hero h1{font-size:clamp(3rem,6vw,6.2rem)!important;max-width:820px!important}
+.kai-luxe-hero-rail{right:max(2vw,10px)!important}
+.product-hero{
+ min-height:500px;padding:170px max(6vw,52px) 82px!important;
+ background:
+ linear-gradient(100deg,rgba(8,8,9,.96),rgba(8,8,9,.7) 52%,rgba(8,8,9,.35)),
+ url('/assets/hero.jpg') center/cover no-repeat!important;color:#fff!important
+}
+.product-hero .container{width:min(1380px,92%)!important;margin:auto}
+.product-hero h1{font-size:clamp(2.8rem,5.4vw,5.6rem)!important;line-height:.96!important;max-width:920px!important;color:#fff!important}
+.product-hero p{max-width:760px;color:rgba(255,255,255,.8)!important}
+.product-hero .kicker{color:#e8c17f!important}
+.section{padding:82px 0!important}
+.container{width:min(1380px,92%)!important}
+.section-title{font-size:clamp(2.15rem,4.2vw,4.1rem)!important;line-height:1.02!important}
+.size-grid{gap:20px!important}
+.size-grid .card{background:var(--lx-card)!important;border-radius:24px!important;border:1px solid var(--lx-line)!important;box-shadow:var(--lx-shadow)!important}
+.size-grid .card img{aspect-ratio:1/1!important;object-fit:cover!important}
+.size-grid .pad{padding:18px 20px!important}
+.darkbox,.kai-luxe-guide-card,.market-card,.blog-card,.contact-card{
+ border-radius:26px!important;border:1px solid var(--lx-line)!important;box-shadow:var(--lx-shadow)!important
+}
+.kai-luxe-guide-card{background:var(--lx-card)!important;padding:28px!important}
+.section.light{background:#f2eee7!important}
+.kai-luxe-poster-grid{border-radius:30px;overflow:hidden;background:#111;color:#fff;box-shadow:var(--lx-shadow)}
+.kai-luxe-poster-copy{padding:clamp(32px,5vw,72px)!important}
+.kai-luxe-poster-frame{margin:0!important}
+.btn{border-radius:999px!important;font-weight:760!important}
+.btn:not(.dark){background:linear-gradient(135deg,#c79a61,#a87239)!important;color:#fff!important;border-color:transparent!important}
+.btn.dark{background:rgba(12,12,13,.62)!important;color:#fff!important;border:1px solid rgba(255,255,255,.32)!important}
+.footer{background:#0b0b0c!important;color:rgba(255,255,255,.72)!important;padding:58px max(4vw,28px)!important}
+.footer a{color:#fff!important}
+.lx-markets{padding-top:150px!important}
+.blog-main{padding-top:40px!important;padding-bottom:80px!important}
+@media(prefers-reduced-motion:no-preference){
+ .size-grid .card,.kai-luxe-guide-card{transition:transform .26s ease,box-shadow .26s ease}
+ .size-grid .card:hover,.kai-luxe-guide-card:hover{transform:translateY(-5px);box-shadow:0 34px 80px rgba(0,0,0,.16)!important}
+}
+@media(max-width:900px){
+ .header{position:relative!important;background:#0d0d0e!important}
+ .product-hero{padding:76px 28px 60px!important;min-height:430px}
+ .section{padding:54px 0!important}
+ .lx-markets{padding-top:40px!important}
+}
+
+body[data-kai-luxeceram-visual-refresh] .hero h1{color:#fff!important;text-shadow:0 4px 30px rgba(0,0,0,.26)}
+body[data-kai-luxeceram-visual-refresh] .hero p{color:rgba(255,255,255,.82)!important}
+body[data-kai-luxeceram-visual-refresh] .hero{background-image:url('/assets/kai-visual-refresh-v1/hero/luxeceram-hero.webp')!important;background-size:cover!important;background-position:center!important}
