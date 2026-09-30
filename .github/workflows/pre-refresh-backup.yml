@@ -1,0 +1,33 @@
+name: KAI Pre-Refresh Backup Snapshot
+on:
+  push:
+    branches:
+      - backup/pre-visual-refresh-20260930
+
+permissions:
+  contents: read
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout exact pre-refresh main
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 1
+          lfs: true
+
+      - name: Create source snapshot
+        run: |
+          NAME="luxeceram-pre-visual-refresh-20260930"
+          zip -r "$NAME.zip" . -x ".git/*" -x "$NAME.zip"
+
+      - name: Upload backup artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: luxeceram-pre-visual-refresh-20260930
+          path: luxeceram-pre-visual-refresh-20260930.zip
+          if-no-files-found: error
+          retention-days: 30
