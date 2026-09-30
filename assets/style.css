@@ -17,7 +17,7 @@ a{text-decoration:none;color:inherit}
 
 .hero{
   min-height:760px;display:flex;align-items:center;position:relative;
-  background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.58),rgba(0,0,0,.72)),url('hero.jpg') center/cover no-repeat;
+  background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.58),rgba(0,0,0,.72)),url('preview-optimized/hero.webp') center/cover no-repeat;
 }
 .hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 35%,rgba(201,164,92,.20),transparent 36%);pointer-events:none}
 .hero-content{position:relative;z-index:2}
@@ -494,3 +494,12 @@ body{font-size:16px;line-height:1.66}
     scroll-behavior: auto !important;
   }
 }
+
+
+/* KAI preview visual refinement — approval required before production */
+.hero{overflow:hidden;background-size:cover,cover}
+.hero::before{content:"";position:absolute;inset:-20%;background:radial-gradient(circle at 72% 36%,rgba(230,200,121,.22),transparent 28%),radial-gradient(circle at 42% 80%,rgba(201,164,92,.12),transparent 34%);pointer-events:none;z-index:1}
+.hero-content{position:relative;z-index:3}
+.card{border-color:rgba(201,164,92,.22)}
+.card .pad{background:linear-gradient(180deg,#fff,#fbf8f2)}
+@media(prefers-reduced-motion:no-preference){.hero::before{animation:kaiLuxeGlow 9s ease-in-out infinite alternate}@keyframes kaiLuxeGlow{from{transform:translate3d(-1%,0,0) scale(1)}to{transform:translate3d(2%,-1%,0) scale(1.035)}}}
