@@ -1,0 +1,36 @@
+name: KAI Preview Quality
+
+on:
+  push:
+    branches:
+      - preview/site-upgrade-20260930
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preview-quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout preview branch
+        uses: actions/checkout@v5
+      - name: Start local preview server
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 --directory . >/tmp/kai-preview-http.log 2>&1 &
+          for i in {1..20}; do
+            if curl -fsS http://127.0.0.1:4173/ >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/kai-preview-http.log
+          exit 1
+
+      - name: Lighthouse preview audit
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            http://127.0.0.1:4173/
+          runs: 1
+          uploadArtifacts: true
+          temporaryPublicStorage: false
