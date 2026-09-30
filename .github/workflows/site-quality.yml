@@ -43,3 +43,6 @@ jobs:
           args: --root-dir "$(pwd)" --no-progress --max-retries 2 './**/*.html' './**/*.md'
           fail: false
           jobSummary: true
+
+      - name: Content originality report
+        run: python .github/kai-content-quality-audit.py
