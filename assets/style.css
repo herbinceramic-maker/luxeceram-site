@@ -469,28 +469,3 @@ body{font-size:16px;line-height:1.66}
   }
 }
 /* KAI_OS_LUXECERAM_EDITORIAL_VISUAL_PREVIEW_V2_END */
-
-
-/* KAI premium motion layer — lightweight, accessible, no layout shift */
-@media (prefers-reduced-motion: no-preference) {
-  :where(.btn,.button,.cta,.product-card,.article-card,.card,.size-card,.feature-card,.book-card,.guide-card) {
-    transition: transform .24s cubic-bezier(.2,.8,.2,1), box-shadow .24s ease, opacity .24s ease;
-    will-change: transform;
-  }
-  :where(.btn,.button,.cta):hover { transform: translateY(-2px); }
-  :where(.product-card,.article-card,.card,.size-card,.feature-card,.book-card,.guide-card):hover {
-    transform: translateY(-4px);
-  }
-  :where(.hero img,.hero-image img,.hero-media img) {
-    transition: transform .65s cubic-bezier(.2,.8,.2,1);
-  }
-  :where(.hero,.hero-image,.hero-media):hover img { transform: scale(1.015); }
-}
-@media (prefers-reduced-motion: reduce) {
-  *,*::before,*::after {
-    animation-duration: .01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: .01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
