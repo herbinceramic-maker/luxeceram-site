@@ -1,0 +1,83 @@
+
+/* LuxeCeram — Redesign V3 — DRAFT ONLY */
+:root{--l3-bg:#eee9e1;--l3-card:#faf7f1;--l3-ink:#161616;--l3-muted:#6d675f;--l3-gold:#ba864c;--l3-dark:#0d0d0e;--l3-line:rgba(24,24,24,.11);--l3-shadow:0 22px 58px rgba(0,0,0,.10);--l3-radius:24px}
+body.v3-site{background:var(--l3-bg);color:var(--l3-ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+body.v3-site h1,body.v3-site h2,body.v3-site h3{font-family:Georgia,"Times New Roman",serif;letter-spacing:-.035em}
+body.v3-site .header{position:relative;z-index:50;background:#0d0d0e;border-bottom:1px solid rgba(255,255,255,.08)}
+body.v3-site .header .container{width:min(1440px,94%)}
+body.v3-site .menu a,body.v3-site .lang{color:#fff}
+body.v3-site .logo img{background:#fff;padding:5px;border-radius:8px}
+body.v3-site .container{width:min(1360px,92%)}
+body.v3-site .section{padding:76px 0}
+body.v3-site .section-title{font-size:clamp(2.2rem,4vw,4rem);line-height:1.02}
+body.v3-site .kicker{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--l3-gold)}
+body.v3-site .btn{border-radius:999px;font-weight:760}
+body.v3-site .btn:not(.dark){background:linear-gradient(135deg,#c9955f,#9f6d39);border-color:transparent;color:#fff}
+body.v3-site .size-grid{gap:18px}
+body.v3-site .size-grid .card,body.v3-site .kai-luxe-guide-card,body.v3-site .contact-card,body.v3-site .lx-card{background:var(--l3-card);border:1px solid var(--l3-line);border-radius:22px;overflow:hidden;box-shadow:var(--l3-shadow)}
+body.v3-site .size-grid .card img{width:100%;aspect-ratio:1/1;object-fit:cover}
+body.v3-site .size-grid .pad{padding:17px 20px}
+body.v3-site .kai-luxe-guide-card{padding:26px}
+body.v3-site .product-hero{min-height:360px;padding:84px max(5vw,32px);background:linear-gradient(100deg,rgba(8,8,9,.95),rgba(8,8,9,.68)),url('/assets/kai-visual-refresh-v1/hero/luxeceram-hero.webp') center/cover no-repeat;color:#fff}
+body.v3-site .product-hero h1{font-size:clamp(2.7rem,5vw,5rem);line-height:.97;max-width:920px;color:#fff}
+body.v3-site .product-hero p{max-width:760px;color:rgba(255,255,255,.82);line-height:1.7}
+body.v3-site .gallery{gap:14px}
+body.v3-site .gallery img{border-radius:18px;box-shadow:0 14px 34px rgba(0,0,0,.12)}
+body.v3-site .lx-markets{padding:72px 0}
+body.v3-site .lx-hero{background:#161616;color:#fff;border-radius:24px;padding:clamp(30px,5vw,60px);box-shadow:var(--l3-shadow)}
+body.v3-site .lx-grid{gap:18px}
+body.v3-site .blog-main{padding:60px 0}
+body.v3-site .footer{background:#0b0b0c;color:rgba(255,255,255,.72);padding:54px max(4vw,28px)}
+body.v3-site .footer a{color:#fff}
+body.v3-site.v3-home .header{position:absolute;inset:0 0 auto;background:transparent;border:0}
+body.v3-site.v3-home .hero{min-height:700px;position:relative;display:flex;align-items:center;padding:135px 0 115px;background-image:url('/assets/kai-visual-refresh-v1/hero/luxeceram-hero.webp');background-size:cover;background-position:center;overflow:hidden}
+body.v3-site.v3-home .hero:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(6,6,7,.95),rgba(6,6,7,.76) 45%,rgba(6,6,7,.32) 73%,rgba(6,6,7,.14))}
+body.v3-site.v3-home .hero-content{position:relative;z-index:3}
+body.v3-site.v3-home .hero h1{font-size:clamp(3.3rem,6.3vw,6.2rem);line-height:.92;max-width:790px;color:#fff}
+body.v3-site.v3-home .hero p{max-width:620px;font-size:1.08rem;color:rgba(255,255,255,.82);line-height:1.65}
+body.v3-site.v3-home .v3-luxe-rail{position:absolute;z-index:4;right:max(4vw,30px);top:50%;transform:translateY(-50%);display:grid;gap:12px;width:min(330px,28vw)}
+body.v3-site.v3-home .v3-luxe-card{display:grid;grid-template-columns:1fr 104px;min-height:112px;overflow:hidden;background:rgba(250,247,241,.9);color:#171717;border-radius:16px;border:1px solid rgba(255,255,255,.42);box-shadow:0 18px 44px rgba(0,0,0,.16);backdrop-filter:blur(12px)}
+body.v3-site.v3-home .v3-luxe-card span{padding:18px}
+body.v3-site.v3-home .v3-luxe-card b{display:block;font:600 1.15rem/1.1 Georgia,serif}
+body.v3-site.v3-home .v3-luxe-card small{color:#69635b}
+body.v3-site.v3-home .v3-luxe-card img{width:104px;height:100%;object-fit:cover}
+@media(prefers-reduced-motion:no-preference){body.v3-site .size-grid .card,body.v3-site .kai-luxe-guide-card,body.v3-site .v3-luxe-card{transition:transform .24s ease,box-shadow .24s ease}body.v3-site .size-grid .card:hover,body.v3-site .kai-luxe-guide-card:hover,body.v3-site .v3-luxe-card:hover{transform:translateY(-4px)}}
+@media(max-width:980px){body.v3-site.v3-home .hero{padding-bottom:330px}body.v3-site.v3-home .v3-luxe-rail{left:5vw;right:5vw;top:auto;bottom:38px;transform:none;width:auto;grid-template-columns:repeat(3,1fr)}}
+@media(max-width:680px){body.v3-site .section{padding:52px 0}body.v3-site.v3-home .hero{min-height:900px;padding:125px 24px 360px}body.v3-site.v3-home .hero h1{font-size:clamp(2.7rem,13vw,4.6rem)}body.v3-site.v3-home .v3-luxe-rail{grid-template-columns:1fr;left:20px;right:20px}body.v3-site .product-hero{padding:60px 24px}}
+
+/* LUXECERAM HEADER V3.1 */
+body.v3-site.v3-home .header{
+  position:absolute!important;
+  top:0!important;
+  left:0!important;
+  right:0!important;
+  background:transparent!important;
+  border:0!important;
+  backdrop-filter:none!important;
+  box-shadow:none!important;
+}
+body.v3-site.v3-home .header .nav{background:transparent!important}
+
+/* LUXECERAM MOBILE RAIL V3.2 */
+@media(max-width:980px){
+  body.v3-site.v3-home .hero{
+    min-height:auto!important;
+    padding:125px 0 72px!important;
+  }
+  body.v3-site.v3-home .v3-luxe-rail{
+    position:static!important;
+    transform:none!important;
+    width:100%!important;
+    margin-top:30px!important;
+    grid-template-columns:repeat(3,1fr)!important;
+  }
+}
+@media(max-width:680px){
+  body.v3-site.v3-home .hero{
+    padding:105px 20px 54px!important;
+  }
+  body.v3-site.v3-home .v3-luxe-rail{
+    grid-template-columns:1fr!important;
+    gap:10px!important;
+  }
+}
