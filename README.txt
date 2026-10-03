@@ -11,3 +11,5 @@ HOW TO REPLACE TILE IMAGES
 
 Best image size: 900x650 px or larger.
 Use compressed JPG/WebP for faster loading.
+
+Deployment retrigger: 2026-10-03 article publisher recovery.
