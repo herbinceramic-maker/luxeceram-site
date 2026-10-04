@@ -31993,4 +31993,15 @@
 
 
 </main><a class="whatsapp" href="https://wa.me/989131573161" data-kai-event="whatsapp_click">WhatsApp</a><footer class="footer"><div class="container"><div>© 2026 LuxeCeram. All rights reserved.</div><div class="legal-links"><a href="/privacy-policy.html" data-legal-key="privacy">Privacy Policy</a><a href="/cookie-policy.html" data-legal-key="cookies">Cookie Policy</a><a href="/terms.html" data-legal-key="terms">Terms of Use</a><button type="button" data-cookie-settings data-legal-key="settings">Cookie Settings</button></div></div></footer>  <script defer src="/assets/js/kai-retargeting-events.js" data-kai-retargeting-foundation="v1"></script>
+<script data-kai-orphan-grid-guard="luxe-v1">
+document.addEventListener("DOMContentLoaded",function(){
+  const grid=document.querySelector(".blog-grid"); if(!grid)return;
+  document.querySelectorAll("main > article.kaios-article-card").forEach(src=>{
+    const a=src.querySelector("h2 a"),p=src.querySelector("p"),t=src.querySelector("time[datetime]"); if(!a)return;
+    const href=new URL(a.href,location.origin).pathname,card=document.createElement("article"); card.className="blog-card";
+    card.innerHTML='<div class="kicker">Buyer Guide</div><h2><a href="'+href+'">'+a.innerHTML+"</a></h2><p>"+(p?p.innerHTML:"")+"</p><p>"+(t?'<time class="kai-card-date" datetime="'+t.getAttribute("datetime")+'">'+t.getAttribute("datetime")+"</time>":"")+'<a href="'+href+'">Read the guide →</a></p>';
+    grid.prepend(card); src.remove();
+  });
+});
+</script>
 </body></html>
