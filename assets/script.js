@@ -1,10 +1,10 @@
 const translations = {
   en: {
-    nav_home:"Home", nav_sizes:"Sizes", nav_about:"About Us", nav_export:"Export", nav_contact:"Contact",
+    nav_home:"Home", nav_sizes:"Sizes", nav_about:"About Us", nav_export:"Export", nav_catalogs:"Catalogs", nav_contact:"Contact",
     hero_kicker:"Premium surfaces. Reliable export supply.",
     hero_title:"Porcelain and ceramic tiles for global buyers and project supply.",
     hero_text:"LuxeCeram connects importers, distributors and project buyers with selected Iranian porcelain and ceramic tile manufacturers, supporting product comparison, samples, packing details and export documentation.",
-    hero_btn1:"View Collections", hero_btn2:"WhatsApp Inquiry",
+    hero_btn1:"View Collections", hero_btn_catalogs:"Download Catalogs", hero_btn2:"WhatsApp Inquiry",
     sizes_kicker:"Tile Sizes", sizes_title:"Explore Our Tile Size Collections", sizes_text:"Choose a size to view available models and request pricing.",
     about_kicker:"About LuxeCeram", about_title:"Export sourcing built around buyer requirements",
     about_text:"Share the required tile size, finish, approximate quantity and destination. We coordinate suitable models, factory information, packing details and the next commercial step.",
@@ -15,11 +15,11 @@ const translations = {
     contact_kicker:"Contact Us", contact_title:"Let’s Discuss Your Tile Requirements", contact_btn:"Message on WhatsApp", email_btn:"Send Email"
   },
   fa: {
-    nav_home:"خانه", nav_sizes:"سایزها", nav_about:"درباره ما", nav_export:"صادرات", nav_contact:"تماس",
+    nav_home:"خانه", nav_sizes:"سایزها", nav_about:"درباره ما", nav_export:"صادرات", nav_catalogs:"کاتالوگ‌ها", nav_contact:"تماس",
     hero_kicker:"سطوح ممتاز. تأمین صادراتی قابل اعتماد.",
     hero_title:"کاشی و سرامیک پرسلانی برای خریداران و پروژه‌های بین‌المللی",
     hero_text:"LuxeCeram واردکنندگان، توزیع‌کنندگان و خریداران پروژه‌ای را به تولیدکنندگان منتخب کاشی و سرامیک ایران متصل می‌کند و در مقایسه محصول، نمونه، بسته‌بندی و مدارک صادراتی همراه خریدار است.",
-    hero_btn1:"مشاهده کالکشن‌ها", hero_btn2:"استعلام واتساپ",
+    hero_btn1:"مشاهده کالکشن‌ها", hero_btn_catalogs:"دریافت کاتالوگ‌ها", hero_btn2:"استعلام واتساپ",
     sizes_kicker:"سایز کاشی", sizes_title:"کالکشن سایزهای کاشی", sizes_text:"یک سایز را انتخاب کنید تا مدل‌ها را ببینید و قیمت بگیرید.",
     about_kicker:"درباره LuxeCeram", about_title:"تأمین صادراتی بر اساس نیاز واقعی خریدار",
     about_text:"سایز، فینیش، مقدار تقریبی و کشور مقصد را اعلام کنید تا مدل‌های مناسب، اطلاعات کارخانه، جزئیات بسته‌بندی و مرحله بعدی تجاری هماهنگ شود.",
@@ -30,11 +30,11 @@ const translations = {
     contact_kicker:"تماس", contact_title:"نیاز کاشی خود را با ما مطرح کنید", contact_btn:"پیام در واتساپ", email_btn:"ارسال ایمیل"
   },
   ru: {
-    nav_home:"Главная", nav_sizes:"Размеры", nav_about:"О нас", nav_export:"Экспорт", nav_contact:"Контакты",
+    nav_home:"Главная", nav_sizes:"Размеры", nav_about:"О нас", nav_export:"Экспорт", nav_catalogs:"Каталоги", nav_contact:"Контакты",
     hero_kicker:"Премиальные поверхности. Надежные экспортные поставки.",
     hero_title:"Керамогранит и керамическая плитка для международных покупателей и проектов",
     hero_text:"LuxeCeram соединяет импортёров, дистрибьюторов и проектных покупателей с выбранными иранскими производителями, помогая сравнивать модели, образцы, упаковку и экспортные документы.",
-    hero_btn1:"Смотреть коллекции", hero_btn2:"Запрос WhatsApp",
+    hero_btn1:"Смотреть коллекции", hero_btn_catalogs:"Скачать каталоги", hero_btn2:"Запрос WhatsApp",
     sizes_kicker:"Размеры плитки", sizes_title:"Коллекции по размерам", sizes_text:"Выберите размер, чтобы посмотреть модели и запросить цену.",
     about_kicker:"О LuxeCeram", about_title:"Экспортный подбор по требованиям покупателя",
     about_text:"Сообщите размер, отделку, примерный объём и страну назначения. Мы координируем подходящие модели, данные фабрики, упаковку и следующий коммерческий этап.",
@@ -45,11 +45,11 @@ const translations = {
     contact_kicker:"Контакты", contact_title:"Обсудим ваши требования", contact_btn:"Написать в WhatsApp", email_btn:"Отправить Email"
   },
   ar: {
-    nav_home:"الرئيسية", nav_sizes:"المقاسات", nav_about:"من نحن", nav_export:"التصدير", nav_contact:"اتصل بنا",
+    nav_home:"الرئيسية", nav_sizes:"المقاسات", nav_about:"من نحن", nav_export:"التصدير", nav_catalogs:"الكتالوجات", nav_contact:"اتصل بنا",
     hero_kicker:"أسطح فاخرة. توريد تصديري موثوق.",
     hero_title:"بلاط بورسلان وسيراميك للمشترين والمشاريع الدولية",
     hero_text:"تربط LuxeCeram المستوردين والموزعين ومشتري المشاريع بمصنّعين إيرانيين مختارين، مع دعم مقارنة النماذج والعينات والتعبئة ووثائق التصدير.",
-    hero_btn1:"عرض المجموعات", hero_btn2:"استفسار واتساب",
+    hero_btn1:"عرض المجموعات", hero_btn_catalogs:"تحميل الكتالوجات", hero_btn2:"استفسار واتساب",
     sizes_kicker:"مقاسات البلاط", sizes_title:"استكشف مجموعات المقاسات", sizes_text:"اختر مقاساً لعرض النماذج وطلب السعر.",
     about_kicker:"عن LuxeCeram", about_title:"توريد تصديري مبني على متطلبات المشتري",
     about_text:"أرسل المقاس والتشطيب والكمية التقريبية وبلد الوجهة لننسق النماذج المناسبة ومعلومات المصنع والتعبئة والخطوة التجارية التالية.",
@@ -60,11 +60,11 @@ const translations = {
     contact_kicker:"اتصل بنا", contact_title:"ناقش متطلباتك معنا", contact_btn:"راسلنا واتساب", email_btn:"إرسال بريد"
   },
   es: {
-    nav_home:"Inicio", nav_sizes:"Formatos", nav_about:"Nosotros", nav_export:"Exportación", nav_contact:"Contacto",
+    nav_home:"Inicio", nav_sizes:"Formatos", nav_about:"Nosotros", nav_export:"Exportación", nav_catalogs:"Catálogos", nav_contact:"Contacto",
     hero_kicker:"Superficies premium. Suministro confiable.",
     hero_title:"Azulejos de porcelana y cerámica para compradores y proyectos internacionales",
     hero_text:"LuxeCeram conecta importadores, distribuidores y compradores de proyectos con fabricantes iraníes seleccionados, apoyando la comparación de modelos, muestras, embalaje y documentos de exportación.",
-    hero_btn1:"Ver colecciones", hero_btn2:"Consulta WhatsApp",
+    hero_btn1:"Ver colecciones", hero_btn_catalogs:"Descargar catálogos", hero_btn2:"Consulta WhatsApp",
     sizes_kicker:"Formatos", sizes_title:"Colecciones por formato", sizes_text:"Elija un formato para ver modelos y solicitar precios.",
     about_kicker:"Sobre LuxeCeram", about_title:"Suministro de exportación según los requisitos del comprador",
     about_text:"Indique formato, acabado, cantidad aproximada y destino. Coordinamos modelos adecuados, información de fábrica, embalaje y el siguiente paso comercial.",
@@ -75,11 +75,11 @@ const translations = {
     contact_kicker:"Contacto", contact_title:"Hablemos de sus requisitos", contact_btn:"Mensaje WhatsApp", email_btn:"Enviar Email"
   },
   tr: {
-    nav_home:"Ana Sayfa", nav_sizes:"Ebatlar", nav_about:"Hakkımızda", nav_export:"İhracat", nav_contact:"İletişim",
+    nav_home:"Ana Sayfa", nav_sizes:"Ebatlar", nav_about:"Hakkımızda", nav_export:"İhracat", nav_catalogs:"Kataloglar", nav_contact:"İletişim",
     hero_kicker:"Premium yüzeyler. Güvenilir ihracat tedariki.",
     hero_title:"Uluslararası alıcılar ve projeler için porselen ve seramik karolar",
     hero_text:"LuxeCeram; ithalatçıları, distribütörleri ve proje alıcılarını seçilmiş İran üreticileriyle buluşturur; model, numune, paketleme ve ihracat belgesi karşılaştırmasını destekler.",
-    hero_btn1:"Koleksiyonları Gör", hero_btn2:"WhatsApp Talep",
+    hero_btn1:"Koleksiyonları Gör", hero_btn_catalogs:"Katalogları İndir", hero_btn2:"WhatsApp Talep",
     sizes_kicker:"Karo Ebatları", sizes_title:"Ebat Koleksiyonları", sizes_text:"Modelleri görmek ve fiyat almak için bir ebat seçin.",
     about_kicker:"LuxeCeram Hakkında", about_title:"Alıcı gereksinimlerine göre ihracat tedariki",
     about_text:"Ebat, yüzey, yaklaşık miktar ve varış ülkesini paylaşın. Uygun modelleri, fabrika bilgisini, paketlemeyi ve sonraki ticari adımı koordine ederiz.",
