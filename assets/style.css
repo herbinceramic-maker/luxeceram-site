@@ -492,3 +492,19 @@ url('/assets/kai-visual-refresh-v1/hero/luxeceram-hero.webp') center/cover no-re
 .catalog-support p{color:#ddd;margin:0;max-width:720px}
 @media(max-width:800px){.catalog-grid{grid-template-columns:1fr}.catalog-support{align-items:flex-start;flex-direction:column}.catalog-hero{padding:64px 0 52px}}
 @media(max-width:520px){.catalog-card{grid-template-columns:1fr}.catalog-icon{width:56px;height:56px}.catalog-hero p{font-size:16px}}
+
+/* KAI 2026-10-28: catalog CTA emphasis */
+.btn.catalog-hero-cta,a.btn.catalog-hero-cta{
+  background:linear-gradient(135deg,#f7c948,#ff8a1f)!important;
+  color:#171108!important;
+  border:1px solid rgba(255,214,102,.95)!important;
+  box-shadow:0 10px 28px rgba(255,145,31,.35),0 0 0 3px rgba(247,201,72,.12)!important;
+}
+.btn.catalog-hero-cta:hover,a.btn.catalog-hero-cta:hover{
+  filter:brightness(1.08);transform:translateY(-2px);box-shadow:0 14px 34px rgba(255,145,31,.44),0 0 0 4px rgba(247,201,72,.16)!important;
+}
+
+/* KAI 2026-10-28: active top navigation */
+.menu a.active{color:#f2c85b!important;position:relative}
+.menu a.active::after{content:"";position:absolute;left:12%;right:12%;bottom:-9px;height:3px;border-radius:99px;background:linear-gradient(90deg,#f2c85b,#ff9b2f)}
+@media(max-width:900px){.menu a.active::after{bottom:-4px}}

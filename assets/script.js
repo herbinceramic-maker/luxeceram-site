@@ -112,3 +112,26 @@ document.addEventListener("DOMContentLoaded",()=>{
 });
 
 // KAIOS-LUXECERAM-TEXT-SEO-PREVIEW-V1
+
+// KAI 2026-10-28 active navigation
+(function(){
+  function normalize(h){try{return new URL(h,location.href)}catch(e){return null}}
+  function setActive(){
+    var path=location.pathname.replace(new RegExp('/index\.html$'),'/') || '/';
+    var hash=location.hash||'';
+    document.querySelectorAll('.menu a').forEach(function(a){
+      var u=normalize(a.getAttribute('href')); if(!u)return;
+      var up=u.pathname.replace(new RegExp('/index\.html$'),'/') || '/';
+      var on=false;
+      if(path==='/'){
+        if(hash) on=(up==='/' && u.hash===hash);
+        else on=(up==='/' && (u.hash==='#home' || !u.hash));
+      } else on=(up===path);
+      a.classList.toggle('active',on);
+      if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
+    });
+  }
+  window.addEventListener('hashchange',setActive);
+  document.addEventListener('click',function(e){if(e.target.closest('.menu a'))setTimeout(setActive,0)});
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',setActive);else setActive();
+})();
