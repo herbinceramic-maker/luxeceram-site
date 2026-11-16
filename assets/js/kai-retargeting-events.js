@@ -51,7 +51,7 @@
   }
 
   function push(eventName, extra) {
-    window.dataLayer.push(Object.assign({
+    var payload = Object.assign({
       event: eventName,
       kai_event_version: '1.0',
       project: project(),
@@ -61,7 +61,21 @@
       content_id: contentId(),
       page_path: location.pathname,
       consent_state: consentState()
-    }, extra || {}));
+    }, extra || {});
+    window.dataLayer.push(payload);
+
+    // LuxeCeram GTM currently provides the GA4 configuration but does not map
+    // these B2B custom events to GA4. Send them directly only after consent.
+    if (payload.project === 'luxeceram') {
+      try {
+        var choice = JSON.parse(localStorage.getItem('luxeceram_consent_v2') || '{}');
+        if (choice.analytics === true && typeof window.gtag === 'function') {
+          var params = Object.assign({}, payload);
+          delete params.event;
+          window.gtag('event', eventName, params);
+        }
+      } catch (e) {}
+    }
   }
 
   function safeLinkData(anchor) {
