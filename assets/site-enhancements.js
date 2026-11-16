@@ -12,7 +12,9 @@
       let n=a.dataset.kaiEvent||"";
       if(!n&&a.href.includes("wa.me"))n="whatsapp_click";
       if(!n&&a.href.startsWith("mailto:"))n="email_click";
-      if(n&&window.gtag)gtag("event",n,{link_url:a.href,page_location:location.href});
+      // whatsapp_click and article_contact are owned by kai-retargeting-events.js
+      // so GA4 receives one canonical B2B conversion event per physical click.
+      if(n&&n!=="whatsapp_click"&&n!=="article_contact"&&window.gtag)gtag("event",n,{link_url:a.href,page_location:location.href});
     });
     const image=document.querySelector('meta[property="og:image"]')?.content||"https://luxeceram.com/assets/about.jpg";
     const logo={"@type":"ImageObject","url":"https://luxeceram.com/assets/logo.png"};
