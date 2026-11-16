@@ -72,6 +72,7 @@
         if (choice.analytics === true && typeof window.gtag === 'function') {
           var params = Object.assign({}, payload);
           delete params.event;
+          params.send_to = 'G-E89EMKEZ44';
           window.gtag('event', eventName, params);
         }
       } catch (e) {}
