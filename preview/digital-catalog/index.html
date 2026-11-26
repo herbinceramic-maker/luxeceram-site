@@ -67,6 +67,7 @@
 .qr-panel{display:flex;align-items:center;gap:12px;border-top:1px solid #e8edf4;padding-top:13px;font-size:12px;min-width:0}
 .qr-panel img{width:92px;height:92px;object-fit:contain;display:block}
 .qr-panel p{margin:5px 0 0;color:#71839a;line-height:1.5}
+#tileSizes[hidden]{display:none!important}.category-subhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:18px}.category-subhead h3{font-size:15px;margin:0}.maincats .cat{min-width:0}.maincats .cat img{aspect-ratio:4/3;object-fit:contain}.maincats .cat[aria-expanded="true"]{border-color:var(--royal);box-shadow:0 0 0 2px #1b66d533}
 </style></head><body>
 <div class="shell" id="top">
   <header class="head">
@@ -103,20 +104,22 @@
   </header>
 
   <section class="section" id="home">
-    <h2>Choose your size</h2>
-    <div class="mini">Tap any size to filter the catalog</div>
-    <div class="catgrid">
+    <h2>Choose your category</h2>
+    <div class="mini">Select a product category to explore the catalogue</div>
+    <div class="catgrid maincats">
+      <button class="cat maincat" data-size="tiles" aria-expanded="false" aria-controls="tileSizes"><img src="assets/img/60-120-main-collection-p005.jpg" alt="Porcelain and ceramic tiles"><b>Tiles &amp; Ceramics</b><small>384 product pages · 6 sizes</small></button>
+      <button class="cat" data-size="wash-basins"><img loading="lazy" src="sanitary-images/Wash_Basins/LC-SW-001_maya-top-counter-46/LC-SW-001_01.jpg" alt="Wash Basins"><b>Wash Basins</b><small>35 models</small></button>
+      <button class="cat" data-size="toilets"><img loading="lazy" src="sanitary-images/Toilets/LC-SW-030_katia-wall-hung-water-closet-56/LC-SW-030_01.jpg" alt="Toilets / WC"><b>Toilets / WC</b><small>22 models</small></button>
+      <button class="cat" data-size="squat-toilets"><img loading="lazy" src="sanitary-images/Squat_Toilets/LC-SW-058_mega-asian-squat-pans/LC-SW-058_01.jpg" alt="Squat Toilets"><b>Squat Toilets</b><small>13 models</small></button>
+    </div>
+    <div id="tileSizes" hidden><div class="category-subhead"><h3>Tiles &amp; Ceramics — Sizes</h3><button id="allTiles" class="pill" type="button">View all tiles</button></div><div class="catgrid">
       <button class="cat" data-size="60x60"><img src="assets/img/60-60-special-p002.jpg" alt="60 × 60"><b>60 × 60</b><small>3 product pages</small></button>
       <button class="cat" data-size="100x100"><img src="assets/img/100-100-novin-p003.jpg" alt="100 × 100"><b>100 × 100</b><small>39 product pages</small></button>
       <button class="cat" data-size="120x120"><img src="assets/img/120-120-novin-p004.jpg" alt="120 × 120"><b>120 × 120</b><small>56 product pages</small></button>
       <button class="cat" data-size="120x240"><img src="assets/img/120-240-novin-p005.jpg" alt="120 × 240"><b>120 × 240</b><small>63 product pages</small></button>
       <button class="cat" data-size="120x270"><img src="assets/img/120-270-novin-p002.jpg" alt="120 × 270"><b>120 × 270</b><small>71 product pages</small></button>
       <button class="cat" data-size="60x120"><img src="assets/img/60-120-main-collection-p005.jpg" alt="60 × 120"><b>60 × 120</b><small>152 product pages</small></button>
-    
-      <button class="cat" data-size="wash-basins"><img loading="lazy" src="sanitary-images/Wash_Basins/LC-SW-001_maya-top-counter-46/LC-SW-001_01.jpg" alt="Wash Basins"><b>Wash Basins</b><small>35 models</small></button>
-      <button class="cat" data-size="toilets"><img loading="lazy" src="sanitary-images/Toilets/LC-SW-030_katia-wall-hung-water-closet-56/LC-SW-030_01.jpg" alt="Toilets / WC"><b>Toilets / WC</b><small>22 models</small></button>
-      <button class="cat" data-size="squat-toilets"><img loading="lazy" src="sanitary-images/Squat_Toilets/LC-SW-058_mega-asian-squat-pans/LC-SW-058_01.jpg" alt="Squat Toilets"><b>Squat Toilets</b><small>13 models</small></button>
-    </div>
+    </div></div>
   </section>
 
   <section class="section" id="products">
@@ -167,9 +170,10 @@ const $=s=>document.querySelector(s);
 const INITIAL_COUNT=8, ADD_COUNT=12;
 let visibleCount=INITIAL_COUNT;
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-function rows(){return DATA.filter(x=>(active==='all'||x.size===active)&&(`${x.catalog} ${x.size} ${x.page} ${x.id||""} ${x.source_code||""} ${x.subcategory||""}`.toLowerCase().includes(query)));}
+function matchesCategory(x,val){return val==='all'||(val==='tiles'?!x.id:x.size===val);}
+function rows(){return DATA.filter(x=>matchesCategory(x,active)&&(`${x.catalog} ${x.size} ${x.page} ${x.id||""} ${x.source_code||""} ${x.subcategory||""}`.toLowerCase().includes(query)));}
 function resetProducts(){visibleCount=INITIAL_COUNT;renderGrid();}
-function renderPills(){const el=$('#pills');el.innerHTML='';const add=(label,val,count)=>{const b=document.createElement('button');b.className='pill'+(active===val?' active':'');b.textContent=`${label} (${count})`;b.onclick=()=>{active=val;renderPills();resetProducts();window.location.hash='products';};el.appendChild(b);};add('All','all',DATA.length);SIZES.forEach(size=>add(SIZE_LABELS[size],size,DATA.filter(x=>x.size===size).length));}
+function renderPills(){const el=$('#pills');el.innerHTML='';const add=(label,val,count)=>{const b=document.createElement('button');b.className='pill'+(active===val?' active':'');b.textContent=label+' ('+count+')';b.onclick=()=>{active=val;renderPills();resetProducts();window.location.hash='products';};el.appendChild(b);};add('All','all',DATA.length);add('Tiles & Ceramics','tiles',DATA.filter(x=>matchesCategory(x,'tiles')).length);['wash-basins','toilets','squat-toilets'].forEach(size=>add(SIZE_LABELS[size],size,DATA.filter(x=>x.size===size).length));if(active==='tiles'||SIZES.slice(0,6).includes(active))SIZES.slice(0,6).forEach(size=>add(SIZE_LABELS[size],size,DATA.filter(x=>x.size===size).length));}
 function renderGrid(){const list=rows(), shown=list.slice(0,visibleCount),grid=$('#grid');
   if(!list.length){grid.innerHTML='<div style="grid-column:1/-1;background:#fff;border-radius:20px;padding:24px;text-align:center;color:#7b8ba0;border:1px solid #e5ebf3">No products found.</div>';}else{
     grid.innerHTML=shown.map((r,i)=>`<article class="item"><a href="#" class="ph" data-i="${i}"><img loading="lazy" src="${r.img}" alt="${esc(r.catalog)}"></a><div class="meta"><div class="top">${esc(r.catalog)}</div><h3>${r.id?esc(r.subcategory):esc(SIZE_LABELS[r.size])+" · Page "+r.page}</h3><p>${r.id?esc(r.id):"Product page image"}</p></div></article>`).join('');
@@ -185,7 +189,9 @@ function openModal(item){$('#mtitle').textContent=item.catalog;$('#mimg').src=it
 $('#closeModal').onclick=()=>$('#modal').classList.remove('open');
 $('#modal').onclick=e=>{if(e.target.id==='modal')$('#modal').classList.remove('open');};
 $('#search').addEventListener('input',e=>{query=e.target.value.trim().toLowerCase();resetProducts();});
-document.querySelectorAll('.cat').forEach(btn=>btn.onclick=()=>{active=btn.dataset.size;renderPills();resetProducts();window.location.hash='products';});
+function selectCategory(val){active=val;query='';$('#search').value='';renderPills();resetProducts();window.location.hash='products';}
+document.querySelectorAll('.cat').forEach(btn=>btn.onclick=()=>{if(btn.dataset.size==='tiles'){const panel=$('#tileSizes');panel.hidden=!panel.hidden;btn.setAttribute('aria-expanded',String(!panel.hidden));if(!panel.hidden)panel.scrollIntoView({block:'nearest',behavior:'smooth'});return;}selectCategory(btn.dataset.size);});
+$('#allTiles').onclick=()=>selectCategory('tiles');
 $('#loadMoreBtn').addEventListener('click',showMore);
 $('#showAllBtn').onclick=()=>{if(visibleCount>=rows().length){active='all';query='';$('#search').value='';renderPills();resetProducts();}else{showMore();}window.location.hash='products';};
 renderPills();renderGrid();
