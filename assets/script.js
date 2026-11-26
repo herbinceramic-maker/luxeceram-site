@@ -1,5 +1,6 @@
 const translations = {
   en: {
+    nav_products:"Products", cat_title:"Explore Our Product Collections", cat_intro:"Ceramic and porcelain tiles, washbasins and sanitary ware for wholesale and project buyers.", cat_tiles:"Ceramic & Porcelain Tiles", cat_basins:"Washbasins", cat_wc:"Western-style Toilets", cat_squat:"Iranian-style Squat Toilets", cat_pdf:"Download Sanitary Ware PDF", cat_digital:"Digital Catalogue",
     nav_home:"Home", nav_sizes:"Sizes", nav_about:"About Us", nav_export:"Export", nav_catalogs:"Catalogs", nav_contact:"Contact",
     hero_kicker:"Premium surfaces. Reliable export supply.",
     hero_title:"Porcelain and ceramic tiles for global buyers and project supply.",
@@ -15,6 +16,7 @@ const translations = {
     contact_kicker:"Contact Us", contact_title:"Let’s Discuss Your Tile Requirements", contact_btn:"Message on WhatsApp", email_btn:"Send Email"
   },
   fa: {
+    nav_products:"محصولات", cat_title:"دسته‌بندی محصولات", cat_intro:"کاشی و سرامیک، روشویی و چینی بهداشتی برای خریداران عمده و پروژه‌ها.", cat_tiles:"کاشی و سرامیک", cat_basins:"روشویی", cat_wc:"توالت فرنگی", cat_squat:"توالت ایرانی", cat_pdf:"دانلود کاتالوگ PDF چینی بهداشتی", cat_digital:"کاتالوگ دیجیتال",
     nav_home:"خانه", nav_sizes:"سایزها", nav_about:"درباره ما", nav_export:"صادرات", nav_catalogs:"کاتالوگ‌ها", nav_contact:"تماس",
     hero_kicker:"سطوح ممتاز. تأمین صادراتی قابل اعتماد.",
     hero_title:"کاشی و سرامیک پرسلانی برای خریداران و پروژه‌های بین‌المللی",
@@ -30,6 +32,7 @@ const translations = {
     contact_kicker:"تماس", contact_title:"نیاز کاشی خود را با ما مطرح کنید", contact_btn:"پیام در واتساپ", email_btn:"ارسال ایمیل"
   },
   ru: {
+    nav_products:"Продукция", cat_title:"Наши коллекции", cat_intro:"Керамическая плитка, керамогранит, раковины и сантехника для оптовых покупателей и проектов.", cat_tiles:"Плитка и керамогранит", cat_basins:"Раковины", cat_wc:"Унитазы", cat_squat:"Напольные чаши", cat_pdf:"Скачать каталог сантехники PDF", cat_digital:"Цифровой каталог",
     nav_home:"Главная", nav_sizes:"Размеры", nav_about:"О нас", nav_export:"Экспорт", nav_catalogs:"Каталоги", nav_contact:"Контакты",
     hero_kicker:"Премиальные поверхности. Надежные экспортные поставки.",
     hero_title:"Керамогранит и керамическая плитка для международных покупателей и проектов",
@@ -45,6 +48,7 @@ const translations = {
     contact_kicker:"Контакты", contact_title:"Обсудим ваши требования", contact_btn:"Написать в WhatsApp", email_btn:"Отправить Email"
   },
   ar: {
+    nav_products:"المنتجات", cat_title:"استكشف مجموعات منتجاتنا", cat_intro:"بلاط السيراميك والبورسلان وأحواض الغسيل والأدوات الصحية للمشاريع وتجارة الجملة.", cat_tiles:"بلاط السيراميك والبورسلان", cat_basins:"أحواض الغسيل", cat_wc:"مراحيض إفرنجية", cat_squat:"مراحيض أرضية", cat_pdf:"تحميل كتالوج الأدوات الصحية PDF", cat_digital:"الكتالوج الرقمي",
     nav_home:"الرئيسية", nav_sizes:"المقاسات", nav_about:"من نحن", nav_export:"التصدير", nav_catalogs:"الكتالوجات", nav_contact:"اتصل بنا",
     hero_kicker:"أسطح فاخرة. توريد تصديري موثوق.",
     hero_title:"بلاط بورسلان وسيراميك للمشترين والمشاريع الدولية",
@@ -60,6 +64,7 @@ const translations = {
     contact_kicker:"اتصل بنا", contact_title:"ناقش متطلباتك معنا", contact_btn:"راسلنا واتساب", email_btn:"إرسال بريد"
   },
   es: {
+    nav_products:"Productos", cat_title:"Nuestras colecciones", cat_intro:"Azulejos cerámicos y porcelánicos, lavabos y sanitarios para mayoristas y proyectos.", cat_tiles:"Azulejos cerámicos y porcelánicos", cat_basins:"Lavabos", cat_wc:"Inodoros", cat_squat:"Inodoros de cuclillas", cat_pdf:"Descargar catálogo sanitario PDF", cat_digital:"Catálogo digital",
     nav_home:"Inicio", nav_sizes:"Formatos", nav_about:"Nosotros", nav_export:"Exportación", nav_catalogs:"Catálogos", nav_contact:"Contacto",
     hero_kicker:"Superficies premium. Suministro confiable.",
     hero_title:"Azulejos de porcelana y cerámica para compradores y proyectos internacionales",
@@ -75,6 +80,7 @@ const translations = {
     contact_kicker:"Contacto", contact_title:"Hablemos de sus requisitos", contact_btn:"Mensaje WhatsApp", email_btn:"Enviar Email"
   },
   tr: {
+    nav_products:"Ürünler", cat_title:"Ürün koleksiyonlarımız", cat_intro:"Toptan alıcılar ve projeler için seramik, porselen karo, lavabo ve vitrifiye.", cat_tiles:"Seramik ve porselen karo", cat_basins:"Lavabolar", cat_wc:"Klozetler", cat_squat:"Alaturka tuvaletler", cat_pdf:"Vitrifiye PDF kataloğu", cat_digital:"Dijital katalog",
     nav_home:"Ana Sayfa", nav_sizes:"Ebatlar", nav_about:"Hakkımızda", nav_export:"İhracat", nav_catalogs:"Kataloglar", nav_contact:"İletişim",
     hero_kicker:"Premium yüzeyler. Güvenilir ihracat tedariki.",
     hero_title:"Uluslararası alıcılar ve projeler için porselen ve seramik karolar",
