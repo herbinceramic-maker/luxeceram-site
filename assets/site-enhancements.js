@@ -1,5 +1,20 @@
 (function(){
   document.addEventListener("DOMContentLoaded",()=>{
+
+    // Floating return-to-top control; independent of existing navigation.
+    const topButton=document.createElement("button");
+    topButton.type="button";
+    topButton.className="luxe-back-to-top";
+    topButton.setAttribute("aria-label","Back to top");
+    topButton.title="Back to top";
+    topButton.hidden=true;
+    topButton.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>`;
+    document.body.appendChild(topButton);
+    const updateTopButton=()=>{topButton.hidden=window.scrollY<260;};
+    window.addEventListener("scroll",updateTopButton,{passive:true});
+    topButton.addEventListener("click",()=>window.scrollTo({top:0,behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"}));
+    updateTopButton();
+
     const routes={ru:"/ru/blog/",ar:"/ar/blog/",tr:"/tr/blog/"};
     const syncBlogNav=()=>{
       const lang=localStorage.getItem("luxeceram_lang")||"en";

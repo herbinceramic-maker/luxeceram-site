@@ -782,3 +782,10 @@ body:has(.kaios-article) footer{
 #products .luxe-category-card h3{font-size:18px;line-height:1.35}
 #products .luxe-category-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
 @media(max-width:760px){#products .luxe-category-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}#products .luxe-category-card img{height:145px}#products .luxe-category-card h3{font-size:15px}}
+
+/* LuxeCeram floating back-to-top control */
+.luxe-back-to-top{position:fixed;right:20px;bottom:84px;width:46px;height:46px;display:grid;place-items:center;border:1px solid #bfa25a;border-radius:50%;background:#151515;color:#e5c66f;box-shadow:0 4px 18px #0003;z-index:81;cursor:pointer;padding:0;line-height:1}
+.luxe-back-to-top[hidden]{display:none}
+.luxe-back-to-top:focus-visible{outline:2px solid #e5c66f;outline-offset:3px}
+.luxe-back-to-top svg{width:22px;height:22px;display:block}
+@media(max-width:760px){.luxe-back-to-top{right:14px;bottom:72px;width:44px;height:44px}}
